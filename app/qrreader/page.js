@@ -48,10 +48,9 @@ const Page = () => {
                             <QrReader
                                 onScan={handleScan}
                                 onError={handleError}
-                                showViewFinder={true}
-                                key="environment"
-                                constraints={{facingMode:"environment"  }}
-                                style={{ width: '100%', height: '100%' }}
+                                // showViewFinder={true}
+                                facingMode="rear"
+                                style={{ width: '400px', height: '400px' }}
                             />
                         )}
                         {/* Display scanned QR code image and data if available */}
