@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 import QrReader from 'react-qr-scanner';
 import Header from '@/components/Header';
-import QRCode from 'qrcode.react'
 import Footer from '@/components/Footer';
 
 const Page = () => {
@@ -49,7 +48,8 @@ const Page = () => {
                                 onScan={handleScan}
                                 onError={handleError}
                                 showViewFinder={true}
-                                facingMode={'rear'}
+                                facingMode={"environment"}
+                                
                                 style={{ width: '100%', height: '100%' }}
                             />
                         )}
