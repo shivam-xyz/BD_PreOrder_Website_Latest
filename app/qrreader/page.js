@@ -49,7 +49,7 @@ const Page = () => {
                                 onScan={handleScan}
                                 onError={handleError}
                                 showViewFinder={true}
-                                facingMode={'environment'}
+                                facingMode={'rear'}
                                 style={{ width: '100%', height: '100%' }}
                             />
                         )}
