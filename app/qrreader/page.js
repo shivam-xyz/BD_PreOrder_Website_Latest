@@ -1,10 +1,10 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { Box, Grid, Typography } from '@mui/material';
+import QrReader from 'react-qr-scanner';
 import Header from '@/components/Header';
+import QRCode from 'qrcode.react'
 import Footer from '@/components/Footer';
-import QRCode from 'qrcode.react';
-import QrReader from 'modern-react-qr-reader';
 
 const Page = () => {
     const [scannedData, setScannedData] = useState(null);
@@ -28,7 +28,7 @@ const Page = () => {
 
     const handleScan = (data) => {
         if (data) {
-            console.log(data);
+            console.log(data)
             setScannedData(data);
             setScanning(false);
         }
@@ -48,7 +48,9 @@ const Page = () => {
                             <QrReader
                                 onScan={handleScan}
                                 onError={handleError}
-                                style={{ width: '100%' }}
+                                showViewFinder={true}
+                                facingMode={'rear'}
+                                style={{ width: '100%', height: '100%' }}
                             />
                         )}
                         {/* Display scanned QR code image and data if available */}
