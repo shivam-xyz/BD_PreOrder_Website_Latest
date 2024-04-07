@@ -1,7 +1,8 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { Box, Grid, Typography } from '@mui/material';
-import QrReader from 'react-qr-scanner';
+import {QrReader} from 'react-qr-reader';
+import QRCode from 'qrcode.react'; // Import QRCode component
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -47,9 +48,7 @@ const Page = () => {
                             <QrReader
                                 onScan={handleScan}
                                 onError={handleError}
-                                showViewFinder={true}
-                                facingMode={"environment"}
-                                
+                                facingMode="environment" // Set facing mode directly
                                 style={{ width: '100%', height: '100%' }}
                             />
                         )}
