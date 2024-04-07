@@ -49,7 +49,8 @@ const Page = () => {
                                 onScan={handleScan}
                                 onError={handleError}
                                 showViewFinder={true}
-                                constraints={{facingMode: { ideal: "environment" } }}
+                                key="environment"
+                                constraints={{facingMode:"environment"  }}
                                 style={{ width: '100%', height: '100%' }}
                             />
                         )}
