@@ -46,12 +46,10 @@ const Page = () => {
                     <Box sx={{ height: "100%", width: "fit-content", height: { lg: "400px", md: "200px", sm: "200px", xs: "200px" } }}>
                         {cameraAvailable && scanning && (
                             <QrReader
-                            delay={ 300 }
                                 onScan={handleScan}
                                 onError={handleError}
                                 showViewFinder={true}
-                                // facingMode={'environment'}
-                                constraints={{aspectRatio: 1,  facingMode: { ideal: "environment" } }}
+                                constraints={{facingMode: { ideal: "environment" } }}
                                 style={{ width: '100%', height: '100%' }}
                             />
                         )}
