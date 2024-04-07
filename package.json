@@ -16,6 +16,7 @@
     "@mui/material": "^5.15.14",
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "html5-qrcode": "^2.3.8",
+    "modern-react-qr-reader": "^1.0.12",
     "next": "14.1.4",
     "qrcode.react": "^3.1.0",
     "react": "^18",
