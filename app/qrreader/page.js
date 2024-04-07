@@ -22,6 +22,7 @@ const Page = () => {
             const videoDevices = devices.filter(device => device.kind === 'videoinput');
             const rearCamera = videoDevices.find(device => device.label.toLowerCase().includes('back') || device.label.toLowerCase().includes('rear'));
             if (rearCamera) {
+              console.log('Rear Camera found : ',rearCamera);
                 setDeviceId(rearCamera.deviceId);
                 setCameraAvailable(true);
             } else {
@@ -52,6 +53,7 @@ const Page = () => {
             <Grid container justifyContent={'center'} alignItems={'center'} sx={{}}>
                 <Grid item lg={6} md={4} sm={7} xs={11} sx={{ mt: "60px", height: "60vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
                     <Box sx={{ height: "100%", width: "fit-content", height: { lg: "400px", md: "200px", sm: "200px", xs: "200px" } }}>
+                        <Typography>Device ID Rear Camera : {deviceId}</Typography>
                         {cameraAvailable && scanning && (
                             <QrReader
                                 onScan={handleScan}
